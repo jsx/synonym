@@ -121,7 +121,7 @@ assert s == "foo%26bar";
 
 ## Numbers
 
-## Converting a string to an integer
+### Converting a string to an integer
 
 ```javascript
 var n = parseInt("10", 8);
@@ -133,7 +133,7 @@ var n = Number.parseInt("10", 8);
 assert n == 8;
 ```
 
-## Converting a string to a number
+### Converting a string to a number
 
 ```javascript
 var n = +"10";
