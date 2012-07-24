@@ -9,7 +9,7 @@
 ```
 
 ```html
-<-- # need compiling
+<!-- # need compiling
     $ jsx --execute web --output program.jsx.js program.jsx
 -->
 <script src="program.jsx.js"></script>
