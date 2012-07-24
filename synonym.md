@@ -347,7 +347,7 @@ Note that WebGL is experimental.
 
 ```javascript
 var canvas = document.getElementById("world");
-var cx     = canvas.getContext("webgl-experimental");
+var gl     = canvas.getContext("webgl-experimental");
 ```
 
 ```jsx
