@@ -327,6 +327,34 @@ dom.window.setTimeout(function () {
 }, 1000);
 ```
 
+## Graphics
+
+### Getting rendering context for 2D
+
+```javascript
+var canvas = document.getElementById("world");
+var cx     = canvas.getContext("2d");
+```
+
+```jsx
+var canvas = document.getElementById("world") as HTMLCanvasElement;
+var cx     = canvas.getContext("2d") as CanvasRenderingContext2D;
+```
+
+### Getting rendering context for 3D
+
+Note that WebGL is experimental.
+
+```javascript
+var canvas = document.getElementById("world");
+var cx     = canvas.getContext("webgl-experimental");
+```
+
+```jsx
+var canvas = document.getElementById("world") as HTMLCanvasElement;
+var gl     = canvas.getContext("webgl-experimental") as WebGLRenderingContext;
+```
+
 # SEE ALSO
 
 Thanks for [synonym.dartlang.org](http://synonym.dartlang.org/) for inspirations.
