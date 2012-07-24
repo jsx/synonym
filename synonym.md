@@ -266,6 +266,67 @@ var element = dom.document.createElement("dive"); // is Element
 var element = dom.createElement("div");           // is HTMLElement
 ```
 
+## Event handling
+
+## Adding an event listener
+
+```javascript
+element.addEventListener("click", function (event) {
+    // ...
+});
+```
+
+```jsx
+element.addEventListener("click", function (event) {
+    // ...
+});
+```
+
+## Adding a mouse event listener
+
+```javascript
+element.addEventListener("mousedown", function (event) {
+    var x = event.clientX;
+    var y = event.clientY;
+    var rect = event.target.getBoundingClientRect();
+
+    x -= rect.left;
+    y -= rect.top;
+    // ...
+});
+```
+
+```jsx
+// need casting for event and event.target
+element.addEventListener("mousedown", function (event) {
+    assert event instanceof MouseEvent;
+    var e = event as MouseEvent;
+    var x = e.clientX;
+    var y = e.clientY;
+    assert event.target instanceof HTMLElement;
+    var element = event.target as HTMLElement;
+    var rect = element.getBoundingClientRect();
+
+    x -= rect.left;
+    y -= rect.top;
+    // ...
+});
+```
+
+## Schedule a future event
+
+```javascript
+window.setTimeout(function () {
+    // ...
+}, 1000);
+```
+
+```jsx
+dom.window.setTimeout(function () {
+    /// ...
+}, 1000);
+```
+
 # SEE ALSO
 
 Thanks for [synonym.dartlang.org](http://synonym.dartlang.org/) for inspirations.
